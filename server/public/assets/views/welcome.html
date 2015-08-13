@@ -1,0 +1,15 @@
+<div class ="container" ng-controller ="WelcomeController">
+        <div>
+            <h1>{{heading + message}}</h1>
+            <input ng-model="note.message" type="text" placeholder="Enter your name">
+        </div>
+        <button ng-click="updateMessage(note)">Update</button>
+    <div>
+
+        <ul>
+           <li class ="col-md-3" ng-repeat="note in notes | filter: message">{{note.message}}</li>
+       </ul>
+    </div>
+
+    </div>
+
